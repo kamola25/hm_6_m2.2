@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnOk;
     private EditText edtEmail, edtPassword;
-    private TextView txt1, txtRegister, txtForgot, txtTouch;
+    private TextView txt1, txtHello, txtRegister, txtForgot, txtTouch, txtHello2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         txtForgot = findViewById(R.id.txt_password);
         txtTouch = findViewById(R.id.txt_touch);
         txtRegister = findViewById(R.id.txt_password1);
+        txtHello = findViewById(R.id.txt_password2);
         txt1 = findViewById(R.id.txt_password3);
+        txtHello2 = findViewById(R.id.txt_hello);
 
         btnOk.setOnClickListener(view -> {
         if(edtEmail.getText().toString().equals("admin") &&
@@ -34,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
             edtEmail.setVisibility(View.GONE);
             txt1.setVisibility(View.GONE);
             txtRegister.setVisibility(View.GONE);
+            txtHello.setVisibility(View.GONE);
             txtTouch.setVisibility(View.GONE);
             txtForgot.setVisibility(View.GONE);
+            txtHello2.setVisibility(View.VISIBLE);
             Toast.makeText(this, "Вы успешно прошли регистрацию!",
                     Toast.LENGTH_SHORT).show();
         }else {
